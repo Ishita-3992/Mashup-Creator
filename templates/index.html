@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mashup Creator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Mashup Creator</h1>
+        <form action="/create_mashup" method="post">
+            <label for="singer_name">Singer Name:</label>
+            <input type="text" id="singer_name" name="singer_name" required ><br><br>
+            <label for="num_videos">Number of Videos:</label>
+            <input type="number" id="num_videos" name="num_videos" min="1" max="50" value="5" required>
+            <br><br>
+            <label for="audio_duration">Duration(seconds):</label>
+            <input type="number" id="audio_duration" name="audio_duration" min="10" max="300" value="30" required><br><br>
+
+            <label for="email_id">Email ID:</label>
+            <input type="email" id="email_id" name="email_id" required><br><br>
+            <button type="submit">Create Mashup</button>
+        </form>
+    </div>
+</body>
+</html>
 
